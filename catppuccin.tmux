@@ -322,9 +322,11 @@ main() {
   local modules_pane_path=$PLUGIN_DIR/pane
 
   # status
+  local status_justify=$(get_tmux_option "@catppuccin_status_justify" "left")
+
   set status "on"
   set status-bg "${thm_bg}"
-  set status-justify "left"
+  set status-justify "$status_justify"
   set status-left-length "100"
   set status-right-length "100"
 
